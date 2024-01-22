@@ -9,7 +9,7 @@ import { MONGODB } from "./config.js"
 
 const app=express();
 app.use(cors())
-app.use(bodyParser)
+app.use(express.json())
 app.use("/api/v1",rootRooter )
 // console.log(process.env);
 mongoose.connect(MONGODB).then(()=>{
